@@ -17,9 +17,8 @@ class SessionsController < ApplicationController
 
   def destroy
     session.delete :user_id
-    @current_user = nil
-    redirect_to root_path
-  end
+    redirect_to '/'
+end
 
   def omniauth
     @user = User.from_omniauth(auth)

@@ -10,7 +10,6 @@
 
     <link rel="stylesheet" href="/styles/index.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
@@ -25,7 +24,7 @@
         <%= link_to "Add a Movie", new_movie_path %>
         <%= link_to "All Comments", movie_logs_path %>
         <%= link_to "Add a New Comment", new_movie_log_path %>
-        <%= link_to 'Log Out', logout_path, method: 'delete' %>
+        <%= link_to 'Log Out', '/sessions/', method: "delete" %>
       <% end %>
     </nav>
         
@@ -37,9 +36,6 @@
 
     <%= yield %>
 
-    <footer class="branding">
-        <small>&copy; 2019 by David A. Foote <strong>Movie Library</strong></small>
-      </footer>
     </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
